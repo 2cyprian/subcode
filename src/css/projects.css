@@ -1,0 +1,389 @@
+/* =========================================
+   1. GLOBAL VARIABLES
+   ========================================= */
+
+/* =========================================
+   2. SHARED NAVIGATION STYLES
+   (Used for Sectors, Projects, etc.)
+   ========================================= */
+
+/* Container for the buttons */
+.subcode-nav-container {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* The Button Style */
+.subcode-nav-btn {
+    border: none;
+    background-color: var(--secondary);
+    color: var(--text-primary);
+
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+/* SVG Icon Styling (Forces icon to be WHITE) */
+.subcode-nav-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.subcode-nav-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* --- ACTIVE STATE --- */
+.subcode-nav-btn.active {
+    background-color: var(--text-primary);
+    color: var(--border);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Force icon to be DARK when active */
+.subcode-nav-btn.active img {
+    filter: brightness(0.2); 
+}
+
+/* =========================================
+   3. FEATURED PROJECT SECTION
+   ========================================= */
+
+/* Smooth Fade Transition Utility */
+.fade-wrapper {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+/* =========================================
+   4. PROJECT CARD COMPONENT
+   ========================================= */
+
+/* Wrapper: Creates space for floating images */
+.project-component-wrapper {
+    position: relative;
+    padding-top: 10px; /* Space for images to float above card */
+    max-width: 150%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: var(--secondary);
+}
+
+/* --- A. Floating Visuals (Collage) --- */
+.project-visuals {
+    position: absolute;
+     width: 100%;
+    z-index: 10;
+    pointer-events: none; /* Click-through to card */
+    margin-bottom: 40px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+    ;
+
+}
+
+.project-visuals img {
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+
+
+}
+
+.device-img {
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    border: 3px solid #333; /* Device bezel styling */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Specific Image Positions */
+.img-desktop-back {
+    width: 60%;
+    top: 5px;
+    right: 5%;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.img-desktop-front {
+    width: 55%;
+    top: 140px;
+    left: 10%;
+    z-index: 2;
+}
+
+.img-mobile-top {
+    width: 12%;
+    top: 0;
+    left: 20%;
+    z-index: 3;
+}
+
+.img-mobile-bottom {
+    width: 18%;
+    bottom: 10%;
+    right: 15%;
+    z-index: 3;
+}
+
+/* --- B. The Card Body --- */
+.project-card-body {
+    /* Rounded top corners per design */
+    border-radius: 40px 40px 30px 30px;
+    /* Extra top padding pushes text down */
+    color: var(--text-primary);
+    box-shadow: 0 20px 50px rgba(141, 118, 70, 0.15);
+    position: relative;
+
+}
+
+/* Typography */
+.project-content h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    opacity: 0.95;
+    max-width: 800px;
+}
+
+/* Technologies Section */
+.tech-section h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tech-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+.tech-box img{
+    width: 40px;
+    height: 40px;
+}
+
+.tech-box {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.tech-box:hover { transform: translateY(-3px); }
+
+/* Testimonial Section */
+.testimonial-section {
+    margin-bottom: 35px;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.testimonial-header h4 { font-size: 14px; font-weight: 700; }
+.stars { color: gold; font-size: 15px; align-items: center; }
+
+.quote {
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.author {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+/* View Project Button */
+.btn-project-view {
+    background-color: var(--text-primary);
+    color: var(--primary);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    position: absolute;
+    right: 30px;
+    bottom: 90px;
+    width: fit-content;
+}
+
+.btn-project-view:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   5. RESPONSIVE MEDIA QUERIES
+   ========================================= */
+@media (min-width: 992px) {
+    .project-component-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 40px;
+        align-items: start;
+        padding-top: 0px;
+        background: var(--secondary);
+    }
+        .project-visuals {
+            position: relative;
+            grid-column: 1;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    .project-card-body {
+        grid-column: 2;
+        border-radius: 40px 40px 30px 30px;
+        padding: 60px 50px 60px 50px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .project-component-wrapper {
+        padding-top: 100px;
+    }
+    
+    .project-card-body {
+        padding: 180px 30px 40px 30px;
+    }
+
+  
+}
+
+@media (max-width: 768px) {
+        .btn-project-view {
+            position: static !important;
+            display: block;
+            margin: 24px auto 0 auto;
+            right: unset;
+            bottom: unset;
+        }
+    /* Navigation Scroll on Mobile */
+    .subcode-nav-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+        .subcode-nav-container {
+            justify-content: flex-end;
+        }
+    .subcode-nav-btn { flex-shrink: 0; }
+
+    /* Layout Adjustments */
+    .project-component-wrapper { padding-top: 0; }
+    .project-card-body { padding: 30px;  }
+    
+    /* Hide complex overlapping images for cleaner mobile view */
+    .project-visuals {
+        position: relative;
+        width: 100%;
+        height:280px ;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        
+    }
+    .project-visuals img {
+        margin-top: 1px;
+       
+    }
+    
+    .img-desktop-front {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+    
+/* Specific Image Positions */
+.img-desktop-back {
+    width: 50%;
+    top: 5px;
+    right: 12%;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.img-desktop-front {
+    width: 50%;
+    top: 20px;
+    left: 1%;
+    z-index: 2;
+    
+}
+
+.img-mobile-top {
+    width: 10%;
+    top: 0;
+    left: 25%;
+    z-index: 3;
+}
+
+.img-mobile-bottom {
+    width: 12%;
+    bottom: 5%;
+    right: 15%;
+    z-index: 3;
+}
+
+    
+    
+   
+    .project-content h2 { font-size: 26px; }
+}

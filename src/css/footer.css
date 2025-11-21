@@ -1,0 +1,263 @@
+/* =========================================
+   1. BASE & VARIABLES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+
+
+/* =========================================
+   2. MOBILE LAYOUT (3-COLUMN: Left | Middle | Right)
+   ========================================= */
+
+.footer {
+    background-color: var(--secondary);
+    color: var(--text-primary);
+    padding: 20px 10px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Main Layout Wrapper --- */
+.footer-content {
+    display: flex; /* Puts Brand (Left) next to Info (Right) */
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+/* --- COLUMN 1: LEFT (Brand & Map) --- */
+.brand-section {
+    width: 22%; /* Occupies the left corner */
+    position: relative;
+    padding-top: 5px;
+    margin-right: 22%;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 190px; /* Keep logo small */
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 150px;
+}
+
+.map-image {
+    width: 140%; /* Make map stick out slightly */
+    margin-left: -20%; /* Center map relative to column */
+    opacity: 0.9;
+    filter: brightness(0) invert(1); /* White Map */
+}
+
+/* --- INFO WRAPPER (Holds Middle & Right) --- */
+.info-section {
+    width: 78%; /* Occupies the rest of the screen */
+    display: grid;
+    /* Split remaining space: Links (Middle) vs Boxes (Right) */
+    grid-template-columns: 0.8fr 1.2fr; 
+    gap: 8px;
+}
+
+/* --- COLUMN 2: MIDDLE (Quick Links) --- */
+/* We assign both Header and Nav to Column 1 of the Grid */
+.quick-links-header {
+    grid-column: 1;
+    grid-row: 1; /* Top of col 1 */
+    
+}
+
+.nav-row {
+    grid-column: 1;
+    /* Bottom of col 1 */
+}
+
+.quick-links-header h3 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 4px;
+    line-height: 1;  
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 12px;
+    opacity: 0.8;
+   
+}
+.nav-links a:hover {
+    text-decoration: underline;
+    opacity: 1;
+    text-decoration-color: var(--accent);
+}
+
+
+
+.social-icons {
+    margin-top: 10px;
+    grid-template-columns: 1fr; /* 2x2 grid for icons to save width */
+    gap: 5px;
+   
+    
+}
+
+.social-icons a img {
+    width: 14px;
+    height: 14px;
+    filter: brightness(0) invert(1); /* Make icons white */
+}
+
+/* --- COLUMN 3: RIGHT (Contact Boxes) --- */
+.contact-boxes {
+    grid-column: 3; /* Places it on the Right */
+    grid-row: 1 / span 2; /* Spans full height */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-box {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 16px;
+    display: flex;
+    background: rgba(0,0,0,0.05);
+}
+
+.text-content h4 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 4px 0 2px;
+}
+
+.text-content .highlight {
+    font-size: 9px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.2;
+}
+
+.text-content .sub-text {
+    font-size: 8px;
+    opacity: 0.8;
+    display: none; /* Hide detail text on super small screens to fit 3 cols */
+}
+
+/* Show sub-text if screen is slightly wider than 360px */
+@media (min-width: 360px) {
+    .text-content .sub-text { display: block; font-size: 7px; word-break: break-all; }
+}
+
+.icon-circle {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.icon-circle img {
+    width: 12px;
+    height: 12px;
+    /* Gold filter for icons */
+    filter: invert(47%) sepia(18%) saturate(864%) hue-rotate(7deg) brightness(93%) contrast(89%);
+}
+
+/* --- Copyright --- */
+.copyright {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+.copyright p { font-size: 9px; opacity: 0.6; }
+
+/* =========================================
+   3. DESKTOP LAYOUT (Restores Large View)
+   ========================================= */
+@media (min-width: 992px) {
+    .footer { padding: 50px 0 20px; }
+    .container { max-width: 1200px; }
+    
+    .footer-content { gap: 40px; }
+    
+    /* Reset Brand */
+    .brand-section { width: 25%; padding-top: 0; }
+    .logo img { max-width: 100%; width: auto; margin-bottom: 20px; }
+    .map-image { width: 100%; margin-left: 0; opacity: 0.8; }
+
+    /* Reset Info Section */
+    .info-section {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Horizontal Nav */
+    .nav-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-column: auto; grid-row: auto;
+    }
+    .quick-links-header { text-align: left; }
+    .quick-links-header h3 { font-size: 18px; }
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { font-size: 14px; }
+    
+    .social-icons { 
+        margin-top: 0; 
+        display: flex; 
+        gap: 15px; 
+    }
+
+    /* Horizontal Boxes */
+    .contact-boxes {
+        grid-column: auto; grid-row: auto;
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .info-box {
+        flex: 1;
+        flex-direction: row; /* Icon Right, Text Left */
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px;
+        background: transparent;
+    }
+    
+    .text-content h4 { font-size: 15px; }
+    .text-content .highlight { font-size: 16px; }
+    .text-content .sub-text { display: block; font-size: 13px; }
+    
+    .icon-circle { width: 45px; height: 45px; margin-left: 15px; margin-bottom: 0; }
+    .icon-circle img { width: 20px; height: 20px; }
+    
+    .copyright p { font-size: 12px; }
+}
