@@ -6,6 +6,7 @@ class Router {
   constructor() {
     this.routes = {
       '/': 'index.html',
+      '/home': 'home.html',
       '/about': 'about.html',
       '/projects': 'projects.html',
       '/contact': 'contact.html'
