@@ -18,6 +18,57 @@
   --radius: 8px;
 }
 
+  /* Fade-in animation for hero */
+  .fade-in-hero {
+    opacity: 0;
+    animation: fadeInHero 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeInHero {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Slide-up and fade-in for components */
+  .slide-up-fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUpFadeIn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  /* Animation delays for lazy loading effect */
+  .navbar.slide-up-fade-in {
+    animation-delay: 0s; /* Navbar appears instantly */
+  }
+  .fade-in-hero {
+    animation-delay: 0.5s; /* Hero animates after navbar */
+  }
+  .footer.slide-up-fade-in {
+    animation-delay: 1.5s; /* Footer animates last */
+  }
+  /* Staggered delays for main content components only (not navbar/footer) */
+  .main-content .slide-up-fade-in,
+  .main-content .card.slide-up-fade-in,
+  .main-content .service-card.slide-up-fade-in {
+    animation-delay: 1s; /* Main content animates after hero */
+  }
+  /* Add more selectors and delays as needed for other main content components */
+
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 * {
   margin: 0;
   padding: 0;

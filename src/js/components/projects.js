@@ -90,9 +90,9 @@ const featuredProjectsDB = [
         title: "AfyaConnect Telemed",
         description: "A patient-doctor connectivity app allowing remote consultations, prescription management, and secure medical history storage. Built with HIPAA compliance standards for maximum data privacy.",
         technologies: [
-            { icon: "../assets/icons/go.svg", color: "#F05138" },
+            { icon: "../assets/icons/fastapi.svg", color: "#F05138" },
             { icon: "../assets/icons/android.svg", color: "#3DDC84" },
-            { icon: "../assets/icons/doctor.svg", color: "#333" },
+            { icon: "../assets/icons/tailwindcss.svg", color: "#333" },
             { icon: "../assets/icons/mysql.svg", color: "#8D7646" }
         ],
         testimonial: {
@@ -117,10 +117,10 @@ const featuredProjectsDB = [
         title: "Rashal Energies Website",
         description: "A modern, fast, and fully responsive corporate website built for Rashal Energies to showcase their solar products, services, and clean-energy solutions. The platform strengthens their brand presence, improves customer trust, and makes it easy for clients to explore and contact the company.",
         technologies: [
-            { icon: "../assets/icons/leaf.svg", color: "#4caf50" },
+            { icon: "../assets/icons/bulma.svg", color: "#4caf50" },
             { icon: "../assets/icons/python.svg", color: "#3776AB" },
-            { icon: "../assets/icons/wifi.svg", color: "#333" },
-            { icon: "../assets/icons/bolt.svg", color: "#FBBF24" }
+            { icon: "../assets/icons/react.svg", color: "#333" },
+            { icon: "../assets/icons/tailwindcss.svg", color: "#FBBF24" }
         ],
         testimonial: {
             text: "A clean, modern website that clearly communicates <br> our services and strengthens our brand presence.",

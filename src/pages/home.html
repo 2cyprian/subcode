@@ -9,6 +9,14 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
+
+ <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -21,23 +29,22 @@
   <div id="navbar"></div>
 
   <main>
-    <!-- {% include "hero.html" %} -->
-     <div id="hero"></div>
+        <!-- {% include "hero.html" %} -->
+        <div id="hero"></div>
 
-    <!-- {% include "what we do " %} -->
-     <section class="services-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>What <span class="highlight">We Do</span></h2>
-        </div>
-        
-        <!-- This container starts empty. JS will fill it. -->
-        <div class="services-grid" id="services-container"></div>
-    </div>
-</section>
+        <!-- {% include "what we do " %} -->
+        <section class="services-section slide-up-fade-in" style="animation-delay:1.2s;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What <span class="highlight">We Do</span></h2>
+                </div>
+                <!-- This container starts empty. JS will fill it. -->
+                <div class="services-grid" id="services-container"></div>
+            </div>
+        </section>
 
-<section class="sectors-section">
-    <div class="container">
+        <section class="sectors-section slide-up-fade-in" style="animation-delay:1.5s;">
+            <div class="container">
         
         <!-- Section Header -->
         <div class="section-header">

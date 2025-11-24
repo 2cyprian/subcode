@@ -43,7 +43,8 @@ const servicesData = [
 const container = document.getElementById('services-container');
 
 if (container) {
-    // Show only Digital Transformation and Machine Learning on phone
+        // Show only Digital Transformation and Machine Learning on phone
+        // Add slide-up-fade-in to card rendering
     let filteredData = servicesData;
     if (window.innerWidth <= 600) {
         filteredData = servicesData.filter(item =>
@@ -60,6 +61,7 @@ if (container) {
         </div>
     `).join('');
 
-    container.innerHTML = cardsHTML;
+        container.innerHTML = cardsHTML;
+        container.classList.add('slide-up-fade-in');
 }
 export { servicesData };

@@ -166,6 +166,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadFooter();
   await loadHero();
   handleContactForm();
-  
+
+  // Reset and trigger animation for all animated sections
+  setTimeout(() => {
+    document.querySelectorAll('.slide-up-fade-in').forEach((el) => {
+      el.classList.remove('slide-up-fade-in');
+      void el.offsetWidth;
+      el.classList.add('slide-up-fade-in');
+    });
+    document.querySelectorAll('.fade-in-hero').forEach((el) => {
+      el.classList.remove('fade-in-hero');
+      void el.offsetWidth;
+      el.classList.add('fade-in-hero');
+    });
+    window.scrollTo(0, 0); // Always start at the top of the page after all content loads
+  }, 250);
+
   console.log('✓ Application initialized');
 });

@@ -261,7 +261,7 @@
 /* =========================================
    5. RESPONSIVE MEDIA QUERIES
    ========================================= */
-@media (min-width: 992px) {
+@media (min-width: 800px) {
     .project-component-wrapper {
         display: grid;
         grid-template-columns: 1fr 1.2fr;
@@ -289,12 +289,11 @@
         padding: 60px 50px 60px 50px;
         margin-top: 0;
     }
+
 }
 
 @media (max-width: 992px) {
-    .project-component-wrapper {
-        padding-top: 100px;
-    }
+    
     
     .project-card-body {
         padding: 180px 30px 40px 30px;
@@ -303,7 +302,7 @@
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
         .btn-project-view {
             position: static !important;
             display: block;
