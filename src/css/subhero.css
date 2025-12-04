@@ -1,13 +1,13 @@
 /* --- Variables --- */
 /* --- Section Layout --- */
 .sub-hero-section {
-    padding: 20px 20px;
+    padding-top:12px ;
     color: var(--text-white);
     display: flex;
     align-items: center;
 }
 
-.container {
+ .sub-hero-section .container {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -22,10 +22,10 @@
 
 /* --- Left Side: Text --- */
 .sub-hero-text h2 {
-    font-size: 42px;
+    font-size: var(--h1);
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
 }
 
@@ -37,7 +37,7 @@
 }
 
 .sub-hero-text p {
-    font-size: 16px;
+    font-size: var(--p1);
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 40px;
@@ -52,10 +52,10 @@
 
 .btn {
     text-decoration: none;
-    padding: 12px 32px;
-    border-radius: 50px;
+    padding: 12px 18px;
+    border-radius: 24px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: var(--p1);
     transition: transform 0.2s ease;
     display: inline-block;
 }
@@ -72,6 +72,7 @@
 .btn-gold {
     background-color: var(--accent);
     color: var(--border);
+   
 }
 
 /* --- Right Side: Image --- */
@@ -97,7 +98,7 @@
 }
 
 /* --- Responsive (Mobile) --- */
-@media (max-width: 992px) {
+@media (max-width: 767px) {
     .sub-hero-grid {
         grid-template-columns: 1fr; /* Stack vertically */
         text-align: center;
@@ -106,6 +107,7 @@
 
     .sub-hero-text p {
         margin: 0 auto 30px; /* Center paragraph */
+        
     }
 
     .action-buttons {
@@ -113,7 +115,7 @@
     }
 
     .sub-hero-text h2 {
-        font-size: 32px;
+        font-size: var(--h2);
     }
     
     .sub-hero-image img {
