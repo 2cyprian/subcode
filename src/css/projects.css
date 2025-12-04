@@ -242,7 +242,7 @@
 .btn-project-view {
     background-color: var(--text-primary);
     color: var(--primary);
-    padding: 15px 40px;
+    padding: 15px;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
@@ -250,7 +250,7 @@
     transition: transform 0.2s;
     position: absolute;
     right: 30px;
-    bottom: 90px;
+    bottom: 60px;
     width: fit-content;
 }
 
