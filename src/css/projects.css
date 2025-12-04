@@ -302,7 +302,7 @@
   
 }
 
-@media (max-width: 800px) {
+@media (max-width: 460px) {
         .btn-project-view {
             position: static !important;
             display: block;
@@ -312,14 +312,11 @@
         }
     /* Navigation Scroll on Mobile */
     .subcode-nav-container {
-        justify-content: flex-start;
+        justify-content: center;
         overflow-x: auto;
         white-space: nowrap;
         padding-bottom: 10px;
     }
-        .subcode-nav-container {
-            justify-content: flex-end;
-        }
     .subcode-nav-btn { flex-shrink: 0; }
 
     /* Layout Adjustments */
