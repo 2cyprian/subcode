@@ -3,7 +3,6 @@
 
 .navbar {
   background-color: var(--primary);
-  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -11,9 +10,9 @@
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,7 +155,7 @@
 
 .navbar-mobile-nav .navbar-btn {
   display: block;
-  width: 100%;
+  width: 50%;
   text-align: center;
   margin-top: 0.5rem;
 }

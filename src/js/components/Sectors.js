@@ -1,4 +1,4 @@
-// --- SECTORS DATA ---
+
 const sectorsData = [
     {
         id: "education",
@@ -10,10 +10,11 @@ const sectorsData = [
         feat1Desc: "Interactive platforms and digital tools facilitate engaging and personalized education.",
         feat2Title: "Scalable Software Solutions",
         feat2Desc: "Cloud-based systems enable widespread access to quality education in remote areas.",
+        feat3Title: "Digital Skills Development",
+        feat3Desc: "Solutions that equip learners with practical, job-ready digital skills.",
+        feat4Title: "Data-Driven Education Management",
+        feat4Desc: "Systems that enable informed decision-making through education data.",
         ctaText: "Transform Education With SubCode",
-        // Replace these URLs with your actual assets
-        imgMain: "../assets/tech/education.svg",
-        imgBack: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: "finance",
@@ -25,9 +26,11 @@ const sectorsData = [
         feat1Desc: "Bank-grade security protocols ensuring safe and instant digital payments.",
         feat2Title: "Data-Driven Insights",
         feat2Desc: "AI-powered analytics to help financial institutions make smarter lending decisions.",
+        feat3Title: "Mobile Banking",
+        feat3Desc: "Accessible banking solutions for unbanked and underbanked populations.",
+        feat4Title: "Integration Support",
+        feat4Desc: "Seamless connection with existing financial systems and payment gateways.",
         ctaText: "Innovate Finance With SubCode",
-        imgMain: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80",
-        imgBack: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: "telecom",
@@ -39,9 +42,11 @@ const sectorsData = [
         feat1Desc: "Real-time monitoring tools to reduce downtime and improve signal quality.",
         feat2Title: "Customer Portals",
         feat2Desc: "Self-service apps that allow users to manage data and subscriptions easily.",
+        feat3Title: "Revenue Management",
+        feat3Desc: "Advanced billing and pricing optimization systems.",
+        feat4Title: "Network Security",
+        feat4Desc: "Enterprise-grade security for telecom infrastructure.",
         ctaText: "Connect With SubCode",
-        imgMain: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
-        imgBack: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: "healthcare",
@@ -53,23 +58,27 @@ const sectorsData = [
         feat1Desc: "Connecting doctors with patients in remote areas via video and chat.",
         feat2Title: "Electronic Records",
         feat2Desc: "Secure, centralized patient data accessible to authorized medical staff.",
+        feat3Title: "Health Analytics",
+        feat3Desc: "Comprehensive dashboards tracking patient metrics and hospital performance.",
+        feat4Title: "Integration Support",
+        feat4Desc: "Seamless connection with existing hospital management systems.",
         ctaText: "Heal With SubCode",
-        imgMain: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
-        imgBack: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: "energy",
         icon: "../assets/icons/energy.svg",
-        label: "Energy",
+        label: "Energy Industries",
         headline: "Powering Sustainable Growth",
         description: "Smart grid management and renewable energy software to ensure efficient power distribution across the grid.",
         feat1Title: "Smart Metering",
         feat1Desc: "IoT solutions for accurate consumption tracking and billing.",
         feat2Title: "Grid Analytics",
         feat2Desc: "Predictive maintenance tools to prevent power outages before they happen.",
+        feat3Title: "Renewable Integration",
+        feat3Desc: "Software solutions for managing solar and wind energy sources.",
+        feat4Title: "Demand Forecasting",
+        feat4Desc: "AI-powered tools to predict energy consumption patterns.",
         ctaText: "Power Up With SubCode",
-        imgMain: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80",
-        imgBack: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80"
     },
     {
         id: "tech",
@@ -81,17 +90,20 @@ const sectorsData = [
         feat1Desc: "MVP development to test market viability quickly.",
         feat2Title: "Enterprise Scale",
         feat2Desc: "Microservices architecture designed for millions of concurrent users.",
+        feat3Title: "Cloud Deployment",
+        feat3Desc: "Managed cloud infrastructure for optimal performance and reliability.",
+        feat4Title: "DevOps Support",
+        feat4Desc: "Continuous integration and deployment pipelines for seamless updates.",
         ctaText: "Build With SubCode",
-        imgMain: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
-        imgBack: "https://images.unsplash.com/photo-1531297461136-82lw9f2a1b33?auto=format&fit=crop&w=600&q=80"
     }
 ];
 
 // --- INITIALIZATION & LOGIC ---
-const navContainer = document.getElementById('sector-nav');
+(function() {
+    const navContainer = document.getElementById('sector-nav');
 
-// 1. Render Buttons dynamically
-sectorsData.forEach((sector, index) => {
+    // 1. Render Buttons dynamically
+    sectorsData.forEach((sector, index) => {
     const btn = document.createElement('button');
     btn.className = `sector-btn ${index === 0 ? 'active' : ''}`; // First one active by default
     btn.innerHTML = `<img src="${sector.icon}"></img> ${sector.label}`;
@@ -123,16 +135,20 @@ function loadSector(index) {
         
         document.getElementById('feat-2-title').innerText = data.feat2Title;
         document.getElementById('feat-2-desc').innerText = data.feat2Desc;
+        document.getElementById('feat-3-title').innerText = data.feat3Title;
+        document.getElementById('feat-3-desc').innerText = data.feat3Desc;
+        document.getElementById('feat-4-title').innerText = data.feat4Title;
+        document.getElementById('feat-4-desc').innerText = data.feat4Desc;
         
         document.getElementById('sector-cta').innerText = data.ctaText;
 
         // Update Images
-        document.getElementById('img-main').src = data.imgMain;
         // document.getElementById('img-bg').src = data.imgBack;
 
         cardContent.style.opacity = 1; // Fade in
     }, 200);
-}
+    }
 
-// Load first sector on page load
-loadSector(0);
+    // Load first sector on page load
+    loadSector(0);
+})();

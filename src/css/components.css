@@ -8,12 +8,16 @@
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin: 2rem 0 1rem 0;
 }
 
 .section-header h2 {
-    font-size: var(--h2);
-    font-weight: 700;
+    background: linear-gradient(90deg, #ffffff 0%, #FBBF24 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
 }
 
 .section-header .highlight {
@@ -78,6 +82,11 @@
 /* --- Variables --- */
 
 /* --- Section Layout --- */
+.sectors-section .container {
+    max-width: 1440px;
+    padding: 0 3rem;
+    width: 100%;
+}
 .sectors-section {
       margin: 0 auto; /* centers the container horizontally */
     display: flex;
@@ -92,7 +101,6 @@
 
 
 .section-header h2 {
-    font-size: var(--h2);
     color: var(--text-primary); /* Gold Text */
     margin-bottom: 40px;
 }
@@ -100,6 +108,7 @@
 .section-header .highlight {
     color: var(--primary-color);
     font-weight: 700;
+
 }
 
 /* --- 1. Navigation Buttons --- */
@@ -110,6 +119,7 @@
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
+
 
 @media (max-width: 600px) {
     .sectors-section {
@@ -165,6 +175,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     transition: all 0.3s ease;
 }
@@ -196,26 +207,23 @@
     border-radius: 30px;
     padding: 60px;
     text-align: left;
-    min-height: 500px; /* Prevent jumping height */
     position: relative;
     overflow: hidden;
 }
 
 .card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Split text and image */
-    gap: 50px;
+    gap: 30px;
     align-items: center;
 }
 
 /* Left Side Content */
 .card-text-content {
     transition: opacity 0.3s ease-in-out;
-}
+    }
 
 .card-text-content h2 {
     color: #ffffff;
-    font-size: var(--h2);
+    font-size: var(--h1-small);
     line-height: 1.2;
     margin-bottom: 10px;
 }
@@ -237,7 +245,8 @@
 .feature-box {
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 12px;
-    max-width:217px ;
+    width:275px ;
+    height: 165px;
     padding: 10px;
     flex: 1;
     background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
@@ -252,12 +261,16 @@
 
 .feature-box p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: var(--p3);
+    font-size: var(--p2);
     line-height: 1.5;
 }
-
+ .sector-cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
 /* CTA Button */
-.btn-white {
+ .btn-white {
     display: inline-block;
     background-color: #ffffff;
     color: var(--text-dark);
@@ -273,43 +286,21 @@
     transform: scale(1.05);
 }
 
-/* --- Right Side Visuals --- */
-.card-visuals {
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-collage {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.image-collage img {
-    position: absolute;
-    border-radius: 12px;
-    transition: all 0.5s ease;
-}
-
-/* The Back Image (slightly hidden) */
-
-/* The Front Image (Main focus) */
-.img-front {
-    width: 90%;
-    bottom: 0;
-    left: 6rem;
-    
-}
 
 /* --- Responsive --- */
 @media (max-width: 786px) {
+    .sectors-section .container{
+        padding: 0 1rem;
+    }
         .card-visuals {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .service-card{
+            width: 90%;
+            justify-content: center;
         }
         .img-front {
             margin: 0 auto;
@@ -317,9 +308,12 @@
             left: unset;
             position: static;
         }
-    .sector-display-card {
-        padding: 10px;
-
+   
+    .sector-title {
+        font-size: var(--h2);
+    }
+    .main-desc {
+        font-size: var(--p2);
     }
 
     .card-grid {
@@ -333,11 +327,17 @@
         height: 300px; /* Smaller height on mobile */
         width: 100%;
     }
-
-    .features-row {
-        flex-direction: row;
+    .features-row{
+        display:  grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
-   
+
+    .feature-box {
+        width: 100%;
+        height: auto;
+    }
+    
 }
 
 /* --- Responsive Adjustments --- */
@@ -346,13 +346,17 @@
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+        margin: 0 20px;
     }
+
 }
 
 /* Mobile (1 Column) */
 @media (max-width: 600px) {
     .services-grid {
         grid-template-columns: 1fr;
+        justify-content: center;
+        margin: 0 10px;
     }
     
     .section-header h2 {

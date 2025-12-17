@@ -1,15 +1,15 @@
 /* --- Variables --- */
 /* --- Section Layout --- */
 .sub-hero-section {
-    padding-top:12px ;
     color: var(--text-white);
     display: flex;
     align-items: center;
 }
 
  .sub-hero-section .container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 0 3rem;
     width: 100%;
 }
 
@@ -22,9 +22,9 @@
 
 /* --- Left Side: Text --- */
 .sub-hero-text h2 {
-    font-size: var(--h1);
+    font-size: var(--h1-large);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.5;
     margin-bottom: 20px;
 
 }
@@ -40,8 +40,6 @@
     font-size: var(--p1);
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 40px;
-    max-width: 540px; /* Prevents text from stretching too wide */
 }
 
 /* Buttons */

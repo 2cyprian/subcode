@@ -10,7 +10,7 @@
 /* Container for the buttons */
 .subcode-nav-container {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 40px;
@@ -84,48 +84,55 @@
     margin-bottom: 50px;
     background-color: var(--secondary);
 }
-
 /* --- A. Floating Visuals (Collage) --- */
 .project-visuals {
-    position: absolute;
-     width: 100%;
-    z-index: 10;
-    pointer-events: none; /* Click-through to card */
-    margin-bottom: 40px;
+    position: relative; 
+    width: 100%;
+    /* 
+       This Aspect Ratio creates the "Stage".
+       If the screen shrinks, the stage shrinks proportionally, 
+       keeping all actors (images) in their exact spots.
+    */
+    aspect-ratio: 4 / 3; 
+    
     background: #fff;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10%;
-    ;
-
-}
-
-.project-visuals img {
-    transition: transform 0.3s ease;
+    margin-bottom: 40px;
+    z-index: 10;
+    pointer-events: none;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20%;
-
-
+    overflow: hidden; 
 }
 
 .device-img {
     position: absolute;
+    display: block;
+    margin: 0;
+    
+    /* STYLING */
     border-radius: 12px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    border: 3px solid #333; /* Device bezel styling */
-    object-fit: cover;
+    border: 3px solid #333;
+    
+    /* --- CRITICAL FOR "SCALE REDUCTION" --- */
+    /* This ensures the image never stretches or squashes. */
+    height: auto; 
+    /* This ensures that if it does hit a limit, it shows the whole image. */
+    object-fit: contain; 
+    
     transition: transform 0.3s ease;
 }
 
-/* Specific Image Positions */
+/* --- POSITIONING & SIZING --- */
+/* 
+   Since we use % for Width AND Top/Left, 
+   the images will stay perfectly arranged 
+   no matter how big or small the screen is.
+*/
+
 .img-desktop-back {
     width: 60%;
-    top: 5px;
+    top: 11%; 
     right: 5%;
     z-index: 1;
     opacity: 0.9;
@@ -133,25 +140,24 @@
 
 .img-desktop-front {
     width: 55%;
-    top: 140px;
+    top: 35%; 
     left: 10%;
     z-index: 2;
 }
 
 .img-mobile-top {
     width: 12%;
-    top: 0;
+    top: 11%;
     left: 20%;
     z-index: 3;
 }
 
 .img-mobile-bottom {
     width: 18%;
-    bottom: 10%;
+    bottom: 25%; /* Using bottom allows anchoring from the floor */
     right: 15%;
     z-index: 3;
 }
-
 /* --- B. The Card Body --- */
 .project-card-body {
     /* Rounded top corners per design */

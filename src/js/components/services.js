@@ -42,7 +42,7 @@ const techData = {
             },
             {
                 title: "AI-Powered Solutions",
-                image: "../assets/tech/ai-powered.svg",
+                image: "../assets/tech/process.svg",
                 desc: "We integrate AI into products and systems to create smarter digital experiences. Whether it's chatbots, recommendation engines, or intelligent assistants, our AI solutions enhance customer engagement and operational intelligence."
             },
             {
