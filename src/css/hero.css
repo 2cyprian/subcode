@@ -106,6 +106,7 @@
     flex: 1; /* Take remaining space */
     overflow: hidden;
     position: relative;
+    flex-direction: row;
     /* Mask fade effect on edges */
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -129,7 +130,7 @@
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Move half distance (because duplicated) */
+     100% { transform: translateX(calc(-50% - 25px)); /* Move half distance (because duplicated) */}
 }
 
 /* =========================================

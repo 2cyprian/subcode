@@ -161,7 +161,7 @@
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .navbar-container {
     padding: 12px 1rem;
   }
