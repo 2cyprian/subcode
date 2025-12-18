@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Locks (optional to ignore if you commit them)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+.cache/
+.parcel-cache/
+.tmp/
+.temp/
+.git
+
+# Source maps
+*.map
+
+# Environment files
+.env*
+!.env.example
+
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Editors/IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+*.local
+.sass-cache/
+
+# Git auth/config (if present locally)
+.git-credentials
+.gitconfig.local
