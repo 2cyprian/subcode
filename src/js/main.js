@@ -3,7 +3,7 @@
 // Load navbar component
 async function loadNavbar() {
   try {
-    const response = await fetch('../components/navbar.html');
+    const response = await fetch('/src/components/navbar.html');
     const html = await response.text();
     document.getElementById('navbar').innerHTML = html;
     updateActiveLink();
@@ -16,7 +16,7 @@ async function loadNavbar() {
 // Load footer component
 async function loadFooter() {
   try {
-    const response = await fetch('../components/footer.html');
+    const response = await fetch('/src/components/footer.html');
     const html = await response.text();
     document.getElementById('footer').innerHTML = html;
   } catch (error) {
@@ -30,7 +30,7 @@ async function loadHero() {
     const heroElement = document.getElementById('hero');
     if (!heroElement) return;
     
-    const response = await fetch('../components/hero.html');
+    const response = await fetch('/src/components/hero.html');
     const html = await response.text();
     heroElement.innerHTML = html;
   } catch (error) {
