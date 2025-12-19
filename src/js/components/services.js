@@ -107,7 +107,7 @@ loadCategory('digital', document.querySelector('.tech-tab-btn'));
 const teamMembers = [
     { name: "Fuad", img: "../assets/tech/fuad.png" },
     { name: "Lugano", img: "../assets/tech/lugano.svg" },
-    { name: "Aisha", img: "../assets/tech/aisha.svg" },
+    { name: "Emmanuel", img: "../assets/tech/emmanuel.svg" },
     { name: "Lupyana", img: "../assets/tech/lupyan.svg" },
     { name: "Maria", img: "../assets/tech/maria.svg" }
 ];
