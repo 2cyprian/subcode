@@ -85,15 +85,10 @@
     height: auto;
     /* Optional: Adds a subtle glow to the image if it's a transparent PNG */
     filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.1)); 
-    animation: float 6s ease-in-out infinite; /* Gentle floating motion */
 }
 
 /* Optional Floating Animation */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
+
 
 /* --- Responsive (Mobile) --- */
 @media (max-width: 767px) {

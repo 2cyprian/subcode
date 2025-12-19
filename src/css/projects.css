@@ -51,8 +51,7 @@
 /* --- ACTIVE STATE --- */
 .subcode-nav-btn.active {
     background-color: var(--text-primary);
-    color: var(--border);
-    font-weight: 700;
+    color: var(--text-dark);
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -303,6 +302,11 @@
     
     .project-card-body {
         padding: 180px 30px 40px 30px;
+    }
+    .subcode-nav-container {
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
     }
 
   
