@@ -179,8 +179,8 @@ button:active {
 
 @media (min-width: 1920px) {
   body {
-    transform: scale(1.4);
-    width: calc(100% / 1.4);
+    transform: scale(1.35);
+    width: calc(100% / 1.35);
     margin: auto;
   }
 }
