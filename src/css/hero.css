@@ -38,7 +38,7 @@
 
 .hero-desc {
     font-size:var(--p1) ;
-    color: var(--text-secondary);
+    color: #FFFFFFB2;
     margin-bottom: 40px;
     max-width: 500px;
     line-height: 1.6;
@@ -66,7 +66,12 @@
     box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
     transition: transform 0.3s;
 }
-
+@media(max-width:1024px){
+.pill { 
+    font-size: 10px;
+padding: 5px;
+}
+}
 .pill:hover { transform: translateY(-3px); }
 .pill i { font-size: 16px; }
 

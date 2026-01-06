@@ -50,7 +50,6 @@
 
 .tech-tab-btn:hover {
     transform: translateY(-2px);
-    color: white;
 }
 
 /* --- Grid Layout --- */
@@ -237,7 +236,7 @@
     }
     .member-name {
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 400;
         color: var(--text-dark);
         text-align: center;
     }
@@ -411,7 +410,7 @@
 
 .member-name {
     font-size: var(--p1);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-dark);
 }
 

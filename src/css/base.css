@@ -25,9 +25,12 @@
   --h1-small:42px;
   --h2:32px;
   --h3:24px;
-  --h2-small:20px;
+  --h3-small:20px;
   --p1:20px;
+  --p1-small:18px;
   --p2:16px;
+  --p3:14px;
+
 
 
 }
@@ -189,6 +192,13 @@ button:active {
   body {
     transform: scale(1.9);
     width: calc(100% / 1.9);
+    margin: auto;
+  }
+}
+@media (min-width:2865px) {
+  body {
+    transform: scale(2);
+    width: calc(100% / 2);
     margin: auto;
   }
 }
