@@ -101,7 +101,7 @@
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 12px;
+    font-size: var(--p2);
     opacity: 0.8;
    
 }
@@ -202,7 +202,7 @@
     .footer { padding: 50px 0 20px; }
     .container { max-width: 1200px; }
     
-    .footer-content { gap: 40px; }
+    .footer-content { gap: 5px; }
     
     /* Reset Brand */
     .brand-section { width: 25%; padding-top: 0; }
@@ -214,7 +214,7 @@
         width: 75%;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 10px;
     }
 
     /* Horizontal Nav */
@@ -227,7 +227,7 @@
     .quick-links-header { text-align: left; }
     .quick-links-header h3 { font-size: 18px; }
     .nav-links { display: flex; gap: 25px; }
-    .nav-links a { font-size: 14px; }
+    .nav-links a { font-size: var(--p2); }
     
     .social-icons { 
         margin-top: 0; 
@@ -239,7 +239,7 @@
     .contact-boxes {
         grid-column: auto; grid-row: auto;
         flex-direction: row;
-        gap: 30px;
+        gap: 10px;
     }
     
     .info-box {
@@ -247,16 +247,16 @@
         flex-direction: row; /* Icon Right, Text Left */
         justify-content: space-between;
         text-align: left;
-        padding: 20px;
+        padding: 10px;
         background: transparent;
     }
     
-    .text-content h4 { font-size: 15px; }
-    .text-content .highlight { font-size: 16px; }
-    .text-content .sub-text { display: block; font-size: 13px; }
+    .text-content h4 { font-size: var(--h3); }
+    .text-content .highlight { font-size: var(--p2); }
+    .text-content .sub-text { display: block; font-size: var(--p2); }
     
     .icon-circle { width: 45px; height: 45px; margin-left: 15px; margin-bottom: 0; }
     .icon-circle img { width: 20px; height: 20px; }
     
-    .copyright p { font-size: 12px; }
+    .copyright p { font-size: var(--p2); }
 }

@@ -24,7 +24,7 @@
 
     padding: 12px 28px;
     border-radius: 30px;
-    font-size: var(--h3);
+    font-size: var(--p2);
     font-weight: 500;
     cursor: pointer;
     display: flex;
@@ -231,14 +231,14 @@
 .stars { color: gold; font-size: 15px; align-items: center; }
 
 .quote {
-    font-style: italic;
-    font-size: var(--p3);
+    font-size: var(--p2);
+    max-width:60%;
     margin-bottom: 2px;
     display: block;
 }
 
 .author {
-    font-size: var(--p3);
+    font-size: var(--p2);
     opacity: 0.9;
     font-weight: 600;
 }
