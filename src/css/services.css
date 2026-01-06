@@ -327,6 +327,7 @@
     font-size: var(--p1);
     line-height: 1.7;
     margin-bottom: 20px;
+    font-weight: 400;
     text-align: justify;
 }
 
