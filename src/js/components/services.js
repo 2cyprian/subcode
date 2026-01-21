@@ -10,7 +10,7 @@ const techData = {
             },
             {
                 title: "Designing Mobile Applications",
-                image: "../assets/tech/mobile.svg",
+                image: "../assets/tech/mobilephone.svg",
                 desc: "Our mobile app solutions bring your business to users’ fingertips. We design and build Android and iOS applications that are visually engaging, intuitive to use, and optimized for performance."
             },
             {

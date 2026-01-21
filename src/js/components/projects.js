@@ -1,60 +1,60 @@
 // --- 1. FEATURED PROJECTS DATA ---
 const featuredProjectsDB = [
     {
-        id: "Tech",
-        label: "Tech",
-        icon: "src/assets/icons/tech.svg", 
+        id: "Education",
+        label: "Education",
+        icon: "src/assets/icons/education.svg",
         // PROJECT DETAILS
-        title: "Tehama Awards Tanzania",
-        description: "The TEHAMA Awards is Tanzania’s premier ICT recognition platform. We built a comprehensive digital nomination and voting system that streamlined the entire process, ensuring transparency and real-time data analytics for the judges.",
+        title: "Learning & Training Portal",
+        description: "A modern, interactive e-learning platform designed to help students and professionals access courses, track progress, and build practical skills. The system includes quizzes, progress<br> analytics, and a responsive user experience for seamless learning.",
         technologies: [
-            { icon: "src/assets/icons/python.svg", color: "#3776AB" },
-            { icon: "src/assets/icons/react.svg", color: "#61DAFB" },
-            { icon: "src/assets/icons/docker.svg", color: "#2496ED" },
-            { icon: "src/assets/icons/mysql.svg", color: "#333" }
+            { icon: "src/assets/icons/html.svg", color: "#E44D26" },
+            { icon: "src/assets/icons/css.svg", color: "#1572B6" },
+            { icon: "src/assets/icons/vue.svg", color: "#F7DF1E" },
+            { icon: "src/assets/icons/node.svg", color: "#3C873A" }
         ],
         testimonial: {
-            text: "Subcode transformed our digital presence with exceptional results.",
-            author: "Mr. Noah Maina",
-            role: "TEHAMA AWARDS Manager",
+            text: "The platform transformed how our learners access training <br> and track their growth.",
+            author: "CTO, TechStart",
+            role: "Software Lead",
             rating: 5
         },
         images: {
-            // Using the Tehama images
-            desktopBack: "src/assets/projects/tehamaweb1.png",
-            desktopFront: "src/assets/projects/tehamaweb2.png",
-            mobileLeft: "src/assets/projects/tehamaphone1.jpg",
-            mobileRight: "src/assets/projects/tehamaphone2.jpg"
-        },
-        link:"https://tehamaawards.tz/"
-    },
-    {
-        id: "finance",
-        label: "Finance",
-        icon: "src/assets/icons/finance.svg",
-        // PROJECT DETAILS
-        title: "M-Pesa Gateway Integration",
-        description: "A robust payment gateway solution designed for high-volume transactions. We integrated seamless mobile money APIs, fraud detection systems, and a merchant dashboard that processes thousands of transactions daily.",
-        technologies: [
-            { icon: "src/assets/icons/fastapi.svg", color: "#E76F00" },
-            { icon: "src/assets/icons/vue.svg", color: "#F7DF1E" },
-            { icon: "src/assets/icons/docker.svg", color: "#2496ED" },
-            { icon: "src/assets/icons/postgres.svg", color: "#333" },
-            ],
-        testimonial: {
-            text: "Security and speed were our top priorities, and <br>SubCode delivered beyond expectations.",
-            author: "Sarah Johnson",
-            role: "FinTech Director",
-            rating: 5
-        },
-        images: {
-            // Finance placeholders
+            // Tech placeholders
             desktopBack: "src/assets/projects/binaryweb1.png",
-            desktopFront: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-            mobileLeft: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=300&q=80",
-            mobileRight: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=300&q=80"
+            desktopFront: "src/assets/projects/binaryweb2.png",
+            mobileLeft: "src/assets/projects/binaryphone1.png",
+            mobileRight: "src/assets/projects/binaryphone2.png"
         }
     },
+  
+    // {
+    //     id: "finance",
+    //     label: "Finance",
+    //     icon: "src/assets/icons/finance.svg",
+    //     // PROJECT DETAILS
+    //     title: "M-Pesa Gateway Integration",
+    //     description: "A robust payment gateway solution designed for high-volume transactions. We integrated seamless mobile money APIs, fraud detection systems, and a merchant dashboard that processes thousands of transactions daily.",
+    //     technologies: [
+    //         { icon: "src/assets/icons/fastapi.svg", color: "#E76F00" },
+    //         { icon: "src/assets/icons/vue.svg", color: "#F7DF1E" },
+    //         { icon: "src/assets/icons/docker.svg", color: "#2496ED" },
+    //         { icon: "src/assets/icons/postgres.svg", color: "#333" },
+    //         ],
+    //     testimonial: {
+    //         text: "Security and speed were our top priorities, and <br>SubCode delivered beyond expectations.",
+    //         author: "Sarah Johnson",
+    //         role: "FinTech Director",
+    //         rating: 5
+    //     },
+    //     images: {
+    //         // Finance placeholders
+    //         desktopBack: "src/assets/projects/binaryweb1.png",
+    //         desktopFront: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    //         mobileLeft: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=300&q=80",
+    //         mobileRight: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=300&q=80"
+    //     }
+    // },
     {
         id: "telecom",
         label: "Telecom",
@@ -82,33 +82,33 @@ const featuredProjectsDB = [
             mobileRight: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=300&q=80"
         }
     },
-    {
-        id: "healthcare",
-        label: "Healthcare",
-        icon: "src/assets/icons/health.svg",
-        // PROJECT DETAILS
-        title: "AfyaConnect Telemed",
-        description: "A patient-doctor connectivity app allowing remote consultations, prescription management, and secure medical history storage. Built with HIPAA compliance standards for maximum data privacy.",
-        technologies: [
-            { icon: "src/assets/icons/fastapi.svg", color: "#F05138" },
-            { icon: "src/assets/icons/android.svg", color: "#3DDC84" },
-            { icon: "src/assets/icons/tailwindcss.svg", color: "#333" },
-            { icon: "src/assets/icons/mysql.svg", color: "#8D7646" }
-        ],
-        testimonial: {
-            text: "This app has made healthcare accessible to rural<br> communities like never before.",
-            author: "Dr. Amina J.",
-            role: "Hospital Administrator",
-            rating: 5
-        },
-        images: {
-            // Health placeholders
-            desktopBack: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-            desktopFront: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80",
-            mobileLeft: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=300&q=80",
-            mobileRight: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=300&q=80"
-        }
-    },
+    // {
+    //     id: "healthcare",
+    //     label: "Healthcare",
+    //     icon: "src/assets/icons/health.svg",
+    //     // PROJECT DETAILS
+    //     title: "AfyaConnect Telemed",
+    //     description: "A patient-doctor connectivity app allowing remote consultations, prescription management, and secure medical history storage. Built with HIPAA compliance standards for maximum data privacy.",
+    //     technologies: [
+    //         { icon: "src/assets/icons/fastapi.svg", color: "#F05138" },
+    //         { icon: "src/assets/icons/android.svg", color: "#3DDC84" },
+    //         { icon: "src/assets/icons/tailwindcss.svg", color: "#333" },
+    //         { icon: "src/assets/icons/mysql.svg", color: "#8D7646" }
+    //     ],
+    //     testimonial: {
+    //         text: "This app has made healthcare accessible to rural<br> communities like never before.",
+    //         author: "Dr. Amina J.",
+    //         role: "Hospital Administrator",
+    //         rating: 5
+    //     },
+    //     images: {
+    //         // Health placeholders
+    //         desktopBack: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+    //         desktopFront: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80",
+    //         mobileLeft: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=300&q=80",
+    //         mobileRight: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=300&q=80"
+    //     }
+    // },
     {
         id: "energy",
         label: "Energy",
@@ -137,33 +137,35 @@ const featuredProjectsDB = [
         },
         link:"https://www.rashalenergies.co.tz"
     },
-    {
-        id: "Education",
-        label: "Education",
-        icon: "src/assets/icons/education.svg",
+      {
+        id: "Tech",
+        label: "Tech",
+        icon: "src/assets/icons/tech.svg", 
         // PROJECT DETAILS
-        title: "Learning & Training Portal",
-        description: "A modern, interactive e-learning platform designed to help students and professionals access courses, track progress, and build practical skills. The system includes quizzes, progress<br> analytics, and a responsive user experience for seamless learning.",
+        title: "Tehama Awards Tanzania",
+        description: "The TEHAMA Awards is Tanzania’s premier ICT recognition platform. We built a comprehensive digital nomination and voting system that streamlined the entire process, ensuring transparency and real-time data analytics for the judges.",
         technologies: [
-            { icon: "src/assets/icons/html.svg", color: "#E44D26" },
-            { icon: "src/assets/icons/css.svg", color: "#1572B6" },
-            { icon: "src/assets/icons/vue.svg", color: "#F7DF1E" },
-            { icon: "src/assets/icons/node.svg", color: "#3C873A" }
+            { icon: "src/assets/icons/python.svg", color: "#3776AB" },
+            { icon: "src/assets/icons/react.svg", color: "#61DAFB" },
+            { icon: "src/assets/icons/docker.svg", color: "#2496ED" },
+            { icon: "src/assets/icons/mysql.svg", color: "#333" }
         ],
         testimonial: {
-            text: "The platform transformed how our learners access training <br> and track their growth.",
-            author: "CTO, TechStart",
-            role: "Software Lead",
+            text: "Subcode transformed our digital presence with exceptional results.",
+            author: "Mr. Noah Maina",
+            role: "TEHAMA AWARDS Manager",
             rating: 5
         },
         images: {
-            // Tech placeholders
-            desktopBack: "src/assets/projects/binaryweb1.png",
-            desktopFront: "src/assets/projects/binaryweb2.png",
-            mobileLeft: "src/assets/projects/binaryphone1.png",
-            mobileRight: "src/assets/projects/binaryphone2.png"
-        }
+            // Using the Tehama images
+            desktopBack: "src/assets/projects/tehamaweb1.png",
+            desktopFront: "src/assets/projects/tehamaweb2.png",
+            mobileLeft: "src/assets/projects/tehamaphone1.jpg",
+            mobileRight: "src/assets/projects/tehamaphone2.jpg"
+        },
+        link:"https://tehamaawards.tz/"
     }
+    
 ];
 
 // --- 2. LOGIC TO RENDER NAV & PROJECTS ---

@@ -101,6 +101,7 @@ html, body {
   line-height: 1.6;
   color: var(--gray-900);
   background-color: var(--primary);
+  overflow-x: hidden;
   
 }
 

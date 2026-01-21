@@ -57,13 +57,14 @@
     color:var(--text-primary);
     
     padding: 8px 10px;
-    border-radius: 50px;
+    border-radius: 20px;
     font-weight: 500;
     font-size: var(--p2);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    /* box-shadow: 0 4px 5px rgba(251, 191, 36, 0.3); */
     transition: transform 0.3s;
 }
 @media(max-width:1024px){
