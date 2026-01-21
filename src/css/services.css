@@ -4,11 +4,13 @@
 .tech-tabs-section {
        padding-top: 1rem;
     color: var(--tech-white);
-}
-
-.tech-tabs-section .container {
     max-width: 1440px; /* Wide container to fit 4 cards */
     margin: 0 auto;
+
+}
+
+.tech-tabs-section .tech-container {
+    margin: 0  2rem;
 }
 
 /* --- Navigation Tabs --- */
@@ -16,6 +18,7 @@
     display: flex;
     gap: 30px;
     margin-bottom: 30px;
+    margin-left: 25px;
     flex-wrap: wrap;
 }
 
