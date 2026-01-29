@@ -204,9 +204,12 @@
         text-align: center;
 
     }
-    .brand-section,
+    
     .info-section {
         width: 100%;
+    }
+    .brand-section{
+        display: none;
     }
     
     .nav-links {

@@ -145,6 +145,12 @@
         transform-origin: top center;
         width: 100%;
     }
+     .sector-btn{
+        padding: 5px 10px ;
+        font-size: var(--p2);
+        gap: 5px;
+
+    }
 }
 
 @media (max-width: 300px) {
@@ -160,11 +166,7 @@
         font-size: var(--p2);
     }
    
-    .sector-btn{
-        padding: 12px ;
-        font-size: var(--p3);
-
-    }
+   
     
 }
 
@@ -351,8 +353,8 @@
     }
      .sector-nav {
         display: grid;
-        grid-template-columns: repeat(2, auto);
-        gap: 10px;
+        grid-template-columns: repeat(4, auto);
+        gap: 5px;
         justify-items: center;
     }
     .sector-display-card{

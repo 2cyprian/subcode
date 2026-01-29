@@ -67,7 +67,7 @@ const sectorsData = [
     {
         id: "energy",
         icon: "../assets/icons/energy.svg",
-        label: "Energy Industries",
+        label: "Energy",
         headline: "Powering Sustainable Growth",
         description: "Smart grid management and renewable energy software to ensure efficient power distribution across the grid.",
         feat1Title: "Smart Metering",

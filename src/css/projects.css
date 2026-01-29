@@ -14,6 +14,7 @@
     gap: 15px;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    padding-top: 4px;
 }
 
 /* The Button Style */
@@ -310,7 +311,7 @@
     .subcode-nav-container {
         gap: 10px;
         display: grid;
-        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-columns: repeat(4, minmax(auto, auto));
     }
 
   
@@ -329,9 +330,19 @@
         justify-content: center;
         overflow-x: auto;
         white-space: nowrap;
-        padding-bottom: 10px;
     }
-    .subcode-nav-btn { flex-shrink: 0; }
+     
+    .subcode-nav-btn {
+        padding: 5px 10px;
+         flex-shrink: 0; 
+        font-size: var(--p2);
+        gap: 5px;
+        }
+
+         .subcode-nav-btn img{
+            width: 16px;
+            height: 16px;
+         }
 
     /* Layout Adjustments */
     .project-component-wrapper { 
