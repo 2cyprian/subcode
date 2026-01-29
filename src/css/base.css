@@ -98,6 +98,7 @@ html, body {
   height: 100%;
   font-family: "Tilt Neon", sans-serif;
   width: 100%;
+padding-top: 80px;
   line-height: 1.6;
   color: var(--gray-900);
   background-color: var(--primary);
@@ -108,13 +109,11 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   transform-origin: top center;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -180,44 +179,39 @@ button:active {
 .btn-secondary:hover {
   background-color: #5a6268;
 }
-
 @media (min-width: 1920px) {
   body {
-    transform: scale(1.35);
-    width: calc(100% / 1.35);
-    margin: auto;
+    zoom: 1.35;
+    width: 100%;
   }
 }
 
 @media (min-width: 2560px) {
   body {
-    transform: scale(1.9);
-    width: calc(100% / 1.9);
-    margin: auto;
+    zoom: 1.9;
+    width: 100%;
   }
 }
-@media (min-width:2865px) {
+
+@media (min-width: 2865px) {
   body {
-    transform: scale(2);
-    width: calc(100% / 2);
-    margin: auto;
+    zoom: 2;
+    width: 100%;
   }
 }
 
 @media (min-width: 3700px) {
   body {
-    transform: scale(2.5);
-    width: calc(100% / 1.15);
-    margin: auto;
+    zoom: 2.5;
+    width: 100%;
   }
-}
-@media (max-width: 1024px) {
-  body {
-    transform: scale(0.98);
-    width: calc(100% / 0.98);
-    margin:auto;
-    padding: 0;
-  }
- 
 }
 
+@media (max-width: 1024px) {
+  body {
+    zoom: 0.98;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+}

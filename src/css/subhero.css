@@ -24,7 +24,7 @@
 .sub-hero-text h2 {
     font-size: var(--h1-large);
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 20px;
 
 }
@@ -92,26 +92,39 @@
 
 /* --- Responsive (Mobile) --- */
 @media (max-width: 767px) {
+    .sub-hero-section .container{
+        padding: 0;
+    }
     .sub-hero-grid {
-        grid-template-columns: 1fr; /* Stack vertically */
+        display: flex;
+        flex-direction: column-reverse;
         text-align: center;
-        gap: 40px;
+        gap: 20px;
+        padding-top: 10px;
     }
 
-    .sub-hero-text p {
-        margin: 0 auto 30px; /* Center paragraph */
-        
-    }
+  
 
     .action-buttons {
         justify-content: center;
+
+
+    }
+    .action-buttons a{
+        font-size: var(--p2);
     }
 
     .sub-hero-text h2 {
         font-size: var(--h2);
     }
+    .sub-hero-text p{
+        text-align: justify;
+        padding: 0 1rem;
+
+    }
     
     .sub-hero-image img {
-        display: none; /* Make image slightly smaller on phones */
+        width: 90%;
+        height: auto;
     }
 }

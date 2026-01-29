@@ -162,12 +162,7 @@
     .main-desc {
         font-size: var(--p2);
     }
-    .sector-nav {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-items: center;
-    }
+   
     .sector-btn{
         padding: 12px ;
         font-size: var(--p3);
@@ -189,10 +184,9 @@
     border: none;
     background-color: var(--secondary);
     color: #fff; /* White text on yellow buttons */
-    padding: 12px 24px;
     border-radius: 30px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -202,8 +196,8 @@
 }
 
 .sector-btn img {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     
 }
 
@@ -266,8 +260,8 @@
 .feature-box {
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 12px;
-    width:275px ;
-    height: 165px;
+    width:20vw ;
+    height: auto;
     padding: 10px;
     flex: 1;
     background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
@@ -349,14 +343,23 @@
         width: 100%;
     }
     .features-row{
-        display:  grid;
-        grid-template-columns: 1fr 1fr;
+        display:  flex;
+        flex-direction: column;
         gap: 20px;
     }
 
     .feature-box {
         width: 100%;
         height: auto;
+    }
+     .sector-nav {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        justify-items: center;
+    }
+    .sector-display-card{
+        padding: 20px;
     }
     
 }
