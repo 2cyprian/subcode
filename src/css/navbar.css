@@ -93,6 +93,7 @@
   padding: 0.75rem 1rem;
   text-decoration: none;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .navbar-btn:hover {
@@ -105,10 +106,10 @@
   background: none;
   border: none;
   padding: 0.25rem;
-
   cursor: pointer;
   position: absolute;
   right: 1rem;
+  z-index: 10;
 }
 
 .navbar-toggle img {
@@ -175,25 +176,31 @@
   }
 
   .navbar-logo {
-  
     left: 1rem;
   }
 
   .navbar-logo img {
     height: auto;
   }
-  .navbar-nav,
-  .navbar-btn-desktop {
+
+  .navbar-nav {
     display: none;
   }
-  .navbar-mobile-menu .navbar-link :hover{
+
+  .navbar-btn-desktop {
+    display: inline-block;
+    position: absolute;
+    right: 4.5rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .navbar-mobile-menu .navbar-link:hover {
     color: var(--accent);
-    
   }
 
   .navbar-toggle {
     display: block;
-
   }
 }
 

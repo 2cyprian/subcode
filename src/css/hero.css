@@ -149,7 +149,8 @@ padding: 5px;
         padding: 0 0.8rem;
     }
     .hero-main {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
         text-align: center;
     }
 
@@ -160,10 +161,13 @@ padding: 5px;
     .hero-pills { display: none; }
 
     .hero-visual {
-        
-    margin-top: 40px; 
-    display: none;
-                    }
+      width: 90%; 
+                    }   
+    .hero-visual img{
+        width: 100%;
+        height: auto;
+
+    }
     .circle-container { width: 320px; height: 320px; }
     
     .badge-left { left: -20px; padding: 10px; }

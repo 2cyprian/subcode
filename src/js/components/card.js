@@ -63,11 +63,6 @@ if (container) {
     // Show only selected ids on phone
     // Add slide-up-fade-in to card rendering
     let filteredData = servicesData;
-    if (window.innerWidth <= 600) {
-        // Example: show only items with id 3 and 6 (Software Development and Machine Learning)
-        const mobileIds = [3, 6];
-        filteredData = servicesData.filter(item => mobileIds.includes(item.id));
-    }
     const cardsHTML = filteredData.map(item => `
         <div class="service-card">
             <div class="card-icon">

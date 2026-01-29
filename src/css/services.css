@@ -83,16 +83,7 @@
     transition: transform 0.3s ease;
     }
 
-    @media (min-width: 1250px) and (max-width: 1390px) {
-        .tech-card {
-            width: 300px;
-            height: auto;
-        }
-        .tech-cards-grid {
-            gap: 10px;
-        }
-    }
-
+  
 .tech-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
@@ -141,11 +132,6 @@
 }
 
 /* --- Responsive --- */
-@media (max-width: 1200px) {
-    .tech-cards-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablet */
-    }
-}
 
 @media (max-width: 600px) {
     .tech-cards-grid {
@@ -171,242 +157,145 @@
     }
 }
 
-/* --- About us  --- */
-/* --- Variables --- */
-
-
-/* --- Section Layout --- */
+/* --- About us: Story & Expertise (clean + responsive) --- */
 .story-expertise-section {
-    padding: 80px 20px;
+    padding: 20px 0;
 }
 
-@media (min-width: 768px) {
-    .story-expertise-section {
-        margin: 0 auto;
-        padding: 80px 20px;
-    }
-    .story-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        align-items: stretch;
-    }
-    .about-card {
-        padding: 10px 10px;
-        border-radius: 20px;
-    }
-    .stats-column {
-        gap: 30px;
-    }
-    .stat-row {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-        text-align: left;
-        gap: 0;
-    }
-    .stat-info {
-        min-width: 120px;
-    }
-    .big-number {
-        font-size: 42px;
-    }
-    .stat-label {
-        font-size: 16px;
-    }
-    .team-container {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        overflow-x: unset;
-    }
-    .team-member {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
-    .avatar-circle {
-        width: 60px;
-        height: 60px;
-        border-width: 3px;
-        margin-bottom: 5px;
-    }
-    .avatar-circle img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .member-name {
-        font-size: 12px;
-        font-weight: 400;
-        color: var(--text-dark);
-        text-align: center;
-    }
-    .tech-card-row {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        padding: 20px;
-        width: 660px;
-        justify-content: flex-end;
-    }
-    .tech-grid-container {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 12px;
-        max-width: 100%;
-        justify-items: center;
-        align-items: center;
-        width: fit-content;
-    }
-    .tech-tile {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.section-header-center {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Gradient title text */
-.section-header-center h2 {
-    background: linear-gradient(90deg, #ffffff 0%, #FBBF24 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    opacity: 0.9;
-      font-size:var(--h2);
-}
 .story-expertise-section .container {
-    max-width: 1440px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
 }
 
+.story-expertise-section .section-header-center {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
 .story-grid {
     display: grid;
-    grid-template-columns: 1.1fr 1.1fr; /* Left side slightly smaller */
-    gap: 20px;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 24px;
     align-items: stretch;
 }
 
-/* --- LEFT COLUMN: About Card --- */
+/* Left column */
 .about-card {
-    background-color: var(--secondary);
+    background: var(--secondary);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 32px;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .about-card h3 {
-    font-size:var(--h2);
-    color: #ffffff;
+    font-size: var(--h3);
     font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.divider-line {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 14px;
 }
 
 .about-card p {
-    color: #ffffff;
-    font-size: var(--p2);
+    font-size: var(--p1);
     line-height: 1.7;
-    margin-bottom: 20px;
-    font-weight: 400;
-    text-align: justify;
+    margin: 0 0 16px;
 }
 
 .about-card p:last-child {
     margin-bottom: 0;
 }
 
-/* --- RIGHT COLUMN: Stats Wrapper --- */
+/* Right column */
 .stats-column {
-    display:grid;
-    grid-template-rows: auto auto;
+    display: grid;
     gap: 20px;
 }
 
-/* Shared Styles for Rows */
 .stat-row {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 15px;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 18px;
 }
 
 .stat-info {
     min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .big-number {
-    display: block;
-    font-size: var(--h2);
+    font-size: clamp(1.6rem, 2.4vw, 2.6rem);
     font-weight: 800;
     color: var(--primary);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .stat-label {
     font-size: var(--p2);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary);
-    line-height: 1.2;
 }
 
-/* --- 1. Experts Row --- */
 .experts-row {
+    display: flex;
+    flex-direction: column;
     background: var(--text-primary);
-    border-radius: 20px;
-    justify-content: space-evenly;
-    
+    justify-content: center;
+    gap: 20px;
+}
 
+.experts-row .stat-info {
+    min-width: 0;
+    max-width: 420px;
+}
+
+.experts-row .stat-title {
+    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 6px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.experts-row .stat-desc {
+    font-size: var(--p2);
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.5;
 }
 
 .team-container {
     display: flex;
-    gap: 15px;
     flex-wrap: nowrap;
-
+    gap: 12px;
+    justify-content: flex-end;
 }
 
 .team-member {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 6px;
 }
 
 .avatar-circle {
-    width: 90px;
-    height: 90px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
-    background-color: var(--secondary); /* Gold circle behind head */
+    background: var(--secondary);
+    border: 2px solid #fff;
     overflow: hidden;
-    margin-bottom: 5px;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .avatar-circle img {
@@ -416,63 +305,54 @@
 }
 
 .member-name {
-    font-size: var(--p2);
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
     color: var(--text-dark);
 }
 
-/* --- 2. Tech Stack Row --- */
 .tech-card-row {
-    background: linear-gradient(to right, #FCEABB, #F8CE7E); /* Gradient gold */
-    border-radius: 20px;
-    padding: 20px;
-   
+    background: linear-gradient(90deg, #fceabb 0%, #f8ce7e 100%);
 }
 
 .tech-grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6,  auto);
     gap: 10px;
-    justify-content: flex-end;
+    justify-items: center;
 }
 
 .tech-tile {
-    width: 75px;
-    height: 70px;
-    background-color: #ffffff;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 24px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
 }
 
 .tech-tile:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     .tech-tabs-section {
         padding-top: 0.5rem;
         transform: scale(0.95);
         transform-origin: top center;
     }
 
-    .story-expertise-section {
-        transform: scale(0.95);
-        transform-origin: top center;
-    }
-
     .tech-cards-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, auto);
         gap: 10px;
     }
 
     .tech-card {
-        width: 230px;
-        height: 400px;
+        width: 100%;
+        height: auto;
         padding: 0.75rem 0;
     }
 
@@ -500,73 +380,17 @@
     .feature-box h4 {
         font-size: 16px;
     }
-   
-    .story-grid{
-        grid-template-columns: repeat(2,minmax(0, 1fr)); /* Stack columns */
-        margin: 10px;
-        max-width: 1024px;
-        left: 0;
-        gap: 10px;   }
 
-        .avatar-circle{
-        width: 60px;
-        height: 60px;
-    
-        }
-        .avatar-circle img{
-            width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        }
-        .member-name{
-        font-size: 12px;
-        }
-        .stat-info{
-        min-width: auto;
-        }
-    .story-expertise-section {
-        margin: 0 1rem;
-        }
-    .experts-row{
-    }
-    .stat-row{
-        width: 100%;
-    }
-
-    .section-header-center h2 {
-        font-size: 28px;
-    }
-
-    .about-card {
-        padding: 20px 15px;
-    }
-
-    .about-card h3 {
-        font-size: 20px;
-    }
-
-   
-
-    .big-number {
-        font-size: 28px;
-    }
-
-    .stat-label {
-        font-size: 12px;
-    }
-
-    .tech-tile {
-        width: 50px;
-        height: 50px;
-        font-size: 18px;
-    }
-
- 
-  
 }
 /* --- Responsive --- */
 @media (max-width: 992px) {
+    .story-expertise-section .container{
+        margin: 0 ;
+    }
+     .story-grid {
+        grid-template-columns: 1fr;
+    gap: 20px;
+    }
         /* Tech row: keep stat-info and tech-grid-container in a single row, just reduce size */
         .tech-card-row {
             display: flex !important;
@@ -603,175 +427,61 @@
             height: 20px;
             font-size: 8px;
         }
-        /* Stat-info in experts row */
-       
-
-        .experts-row .stat-info {
-            min-width: 30p;
-        }
-        .experts-row .big-number {
-            font-size: 20px;
-        }
-        .experts-row .stat-label {
-            font-size: 11px;
-        }
-    .story-grid {
-        grid-template-columns: 1fr; /* Stack columns */
-        margin: 10px;
-        left: 0;
-        ;
-    }
-
-    /* Ensure headings / section text align to the left corner */
-    .section-header-center {
-        text-align: left;
-    }
-
-    .stat-row {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        gap: 8px;
-            width: fit-content;
-
-    }
-
-    .stat-info {
-        margin-bottom: 10px;
-    }
-
-    /* Experts: keep stat-info and team-container in a single row, just reduce size */
-    .experts-row {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center;
-        gap: 5px;
-    }
-    .stat-info {
-        min-width: 80px;
-    }
-    .team-container {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 2px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        align-items: center;
-    }
-    .team-member {
-        flex: 0 0 auto;
-        text-align: center;
-        align-items: center;
-        margin: 0 4px;
-    }
-    .avatar-circle {
-        width: 36px;
-        height: 36px;
-        border-width: 2px;
-        margin-bottom: 2px;
-    }
-    .member-name {
-        font-size: 10px;
-    }
-
-    .avatar-circle {
-        width: 44px;                  /* smaller avatar on small screens */
-        height: 44px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        margin-bottom: 6px;
-    }
-
-    .avatar-circle img {
-        object-fit: cover;
-    }
-
-    .member-name {
-        font-size: 11px;
-        font-weight: 600;
-        color: var(--primary);
-        text-align: left;
-    }
-
-    /* Tech tiles: force 6 icons per row and align them left */
-    .tech-grid-container {
-        display: grid;
-        grid-template-columns: repeat(6, 2fr); /* 6 icons per row */
-        gap: 6px;
-        max-width: 100%;
-        justify-items: start;
-        align-items: center;
-        width: fit-content ;
-    }
-
-    .tech-tile {
-        width: 44px;                  /* sized to fit 6-per-row */
-        height: 44px;
-        border-radius: 8px;
-        font-size: 10px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-
 }
 @media (max-width: 896px) {
-    /* Reduce spacing and scale down card/section sizes for small screens */
-    .story-grid {
-        gap: 16px;
-        justify-content: center;
-    }
+}
 
+@media (max-width: 768px) {
     .story-expertise-section {
-        padding: 40px 12px;
+        padding-bottom: 10px;
     }
 
     .about-card {
-        padding: 30px 20px;
-        border-radius: 16px;
+        padding: 24px;
     }
 
-    .about-card h3 {
-        font-size: 24px;
+    .tech-grid-container {
+        grid-template-columns: repeat(5, minmax(32px, 1fr));
     }
+     .stat-row  .team-container{
+        flex-direction: row;
+        align-items: center
+    }
+}
 
-  
+
+@media (max-width: 600px) {
+
+    
 
     .stat-row {
-        padding: 10px;
-        width: 100%;
+        padding: 16px;
+    }
+    
+
+    .team-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .big-number {
-        font-size: 30px;
-    }
-
-    .stat-label {
-        font-size: 10px;
-    }
-
-    /* Cards and images */
-    .card-img-wrapper {
-        height: 100px;
-    }
-
-    .card-body {
-        padding: 14px 10px;
-    }
-
-    /* Team avatars and tech tiles slightly smaller */
     .avatar-circle {
         width: 52px;
         height: 52px;
     }
+    .tech-card-row{
+        flex-direction: column;
+        align-items: center;
+    }
 
-    .member-name {
-        font-size: 11px;
+    .tech-grid-container {
+        grid-template-columns:repeat(6, auto);
+        gap: 8px;
     }
 
     .tech-tile {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }

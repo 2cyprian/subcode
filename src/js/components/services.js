@@ -139,7 +139,7 @@ if (teamContainer) {
             <div class="avatar-circle">
                 <img src="${member.img}" alt="${member.name}">
             </div>
-            <span class="member-name">${member.name}</span>
+        
         </div>
     `).join('');
 }
