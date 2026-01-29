@@ -55,7 +55,6 @@
 /* Icon Styling */
 .card-icon {
     color: var(--text-primary);
-    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +64,7 @@
 }
 .card-icon img{
  width: auto;
- height: 40px;
+ height: 25px;
 }
 
 /* Typography inside card */
