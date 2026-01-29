@@ -165,7 +165,7 @@
 .story-expertise-section .container {
     max-width: 1400px;
     margin: 0 auto;
-    width: 100%;
+    width: 95%;
 }
 
 .story-expertise-section .section-header-center {
@@ -385,7 +385,7 @@
 /* --- Responsive --- */
 @media (max-width: 992px) {
     .story-expertise-section .container{
-        margin: 0 ;
+        margin: 0 auto ;
     }
      .story-grid {
         grid-template-columns: 1fr;

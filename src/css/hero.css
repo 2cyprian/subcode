@@ -1,6 +1,5 @@
 .hero {
     position: relative;
-    padding-top: 20px;
     color: var(--text-white);
     background-color: transparent;
     overflow: hidden;
