@@ -80,7 +80,7 @@
 .project-component-wrapper {
     position: relative;
     padding-top: 10px; /* Space for images to float above card */
-    max-width: 150%;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 50px;
     background-color: var(--secondary);
@@ -317,13 +317,13 @@
 }
 
 @media (max-width: 460px) {
-        .btn-project-view {
-            position: static !important;
-            display: block;
-            margin: 24px auto 0 auto;
-            right: unset;
-            bottom: unset;
-        }
+    .btn-project-view {
+        position: static !important;
+        display: block;
+        margin: 24px auto 0 auto;
+        right: unset;
+        bottom: unset;
+    }
     /* Navigation Scroll on Mobile */
     .subcode-nav-container {
         justify-content: center;
@@ -334,66 +334,131 @@
     .subcode-nav-btn { flex-shrink: 0; }
 
     /* Layout Adjustments */
-    .project-component-wrapper { padding-top: 0; }
-    .project-card-body { padding: 30px;  }
+    .project-component-wrapper { 
+        padding-top: 0;
+        margin-bottom: 4vh;
+        max-width: 95%;
+    }
     
-    /* Hide complex overlapping images for cleaner mobile view */
+    .project-card-body { 
+        padding: clamp(16px, 4vw, 24px);  
+    }
+    
+    /* Optimized image container for small phones using vw */
     .project-visuals {
         position: relative;
         width: 100%;
-        height:280px ;
-        margin-bottom: 20px;
+        height: clamp(180px, 50vw, 260px);
+        margin-bottom: 3vh;
         display: flex;
         justify-content: center;
+        align-items: center;
         background: #fff;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        border-radius: 12px;
+        overflow: hidden;
     }
+    
     .project-visuals img {
-        margin-top: 1px;
-       
+        margin-top: 0;
     }
     
+    /* Hide all images by default */
+    .device-img {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+    }
+    
+    /* Carousel animation - cycle through images */
+    .img-desktop-back {
+        animation: slideCarousel 12s infinite;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        right: 5%;
+        z-index: 1;
+    }
+
     .img-desktop-front {
-        position: relative;
-        width: 70%;
-        margin: 0 auto;
-        display: block;
+        animation: slideCarousel 12s infinite 3s;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        z-index: 2;
+    }
+
+    .img-mobile-top {
+        animation: slideCarousel 12s infinite 6s;
+        width: 85%;
+        height: 85%;
+        top: 7.5%;
+        left: 7.5%;
+        z-index: 3;
+    }
+
+    .img-mobile-bottom {
+        animation: slideCarousel 12s infinite 9s;
+        width: 85%;
+        height: 85%;
+        bottom: 7.5%;
+        right: 7.5%;
+        z-index: 3;
+    }
+
+    @keyframes slideCarousel {
+        0% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        10% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        25% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        35% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+    }
+
+    .project-content h2 { 
+        font-size: clamp(18px, 5.5vw, 24px);
+        margin-bottom: 2vh;
     }
     
-/* Specific Image Positions */
-.img-desktop-back {
-    width: 50%;
-    top: 5px;
-    right: 12%;
-    z-index: 1;
-    opacity: 0.9;
-}
-
-.img-desktop-front {
-    width: 50%;
-    top: 20px;
-    left: 1%;
-    z-index: 2;
+    .project-description {
+        font-size: clamp(13px, 3.5vw, 16px);
+        margin-bottom: 3vh;
+        line-height: 1.5;
+    }
     
-}
-
-.img-mobile-top {
-    width: 10%;
-    top: 0;
-    left: 25%;
-    z-index: 3;
-}
-
-.img-mobile-bottom {
-    width: 12%;
-    bottom: 5%;
-    right: 15%;
-    z-index: 3;
-}
-
+    .tech-section h4 {
+        font-size: clamp(14px, 4vw, 18px);
+        margin-bottom: 2vh;
+    }
     
+    .tech-row {
+        gap: clamp(8px, 2vw, 12px);
+        margin-bottom: 3vh;
+        flex-wrap: wrap;
+    }
     
-   
-    .project-content h2 { font-size: 26px; }
+    .tech-box {
+        width: clamp(38px, 10vw, 50px);
+        height: clamp(38px, 10vw, 50px);
+        min-width: 38px;
+    }
+    
+    .tech-box img {
+        width: clamp(18px, 5vw, 25px);
+        height: clamp(18px, 5vw, 25px);
+    }
 }
