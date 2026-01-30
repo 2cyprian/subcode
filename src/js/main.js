@@ -52,7 +52,6 @@ function updateActiveLink() {
     }
   });
 }
-
 // Setup mobile navbar toggle behavior
 function setupNavbarToggle() {
   const toggle = document.querySelector('.navbar-toggle');

@@ -57,24 +57,27 @@ const servicesData = [
 
 // 2. The Logic: This renders the cards
 
-const container = document.getElementById('services-container');
+// Wrap in DOMContentLoaded to ensure DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('services-container');
 
-if (container) {
-    // Show only selected ids on phone
-    // Add slide-up-fade-in to card rendering
-    let filteredData = servicesData;
-    const cardsHTML = filteredData.map(item => `
-        <div class="service-card">
-            <div class="card-icon">
-                <img src="${item.icon}" alt="${item.title} icon" class="service-icon" " />
-            <h3>${item.title}</h3>
+  if (container) {
+      // Show only selected ids on phone
+      // Add slide-up-fade-in to card rendering
+      let filteredData = servicesData;
+      const cardsHTML = filteredData.map(item => `
+          <div class="service-card">
+              <div class="card-icon">
+                  <img src="${item.icon}" alt="${item.title} icon" class="service-icon" " />
+              <h3>${item.title}</h3>
 
-            </div>
-            <p>${item.description}</p>
-        </div>
-    `).join('');
+              </div>
+              <p>${item.description}</p>
+          </div>
+      `).join('');
 
-    container.innerHTML = cardsHTML;
-    container.classList.add('slide-up-fade-in');
-}
+      container.innerHTML = cardsHTML;
+      container.classList.add('slide-up-fade-in');
+  }
+});
 export { servicesData };
